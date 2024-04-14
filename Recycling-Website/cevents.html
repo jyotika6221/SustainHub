@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+
+    <title>Community Events</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url("https://www.eaglenews.net/wp-content/uploads/2018/05/Australia-Binhi-cleanup-03.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #e7f0e7; /* Updated font color to green */
+      }
+
+
+      header h1 {
+        font-size: 2.8rem; /* Increased font size */
+        font-weight: bold;
+      }
+
+
+      header p {
+        font-size: 1.6rem;
+        color: #fdf3f3;
+      }
+
+
+      #event-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+
+      .event-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+
+
+      .event-item {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid #4caf50;
+        border-radius: 10px;
+        padding: 15px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        width: 250px; /* Increased card size */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+
+      .event-item:hover {
+        transform: scale(1.05);
+      }
+
+
+      .event-item .event-title {
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+
+      .event-item .event-description {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+
+      /* Use buttons for date and location */
+      .event-item .event-date,
+      .event-item .event-location {
+        display: inline-block;
+        background-color: #4caf50;
+        color: #fff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+
+      .event-item .event-date:hover,
+      .event-item .event-location:hover {
+        background-color: #45a049;
+      }
+
+
+      .event-item.animate__animated {
+        animation-duration: 1s;
+      }
+
+      #add-event-link {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    #add-event-link:hover {
+      background-color: #45a049;
+    }
+    </style>
+  </head>
+
+
+  <body>
+    <script>
+    // Include the navbar using JavaScript
+    document.write('<div id="navbar-placeholder"></div>');
+    document.getElementById('navbar-placeholder').innerHTML =
+        '<object type="text/html" data="navbar.html" ></object>';
+</script>
+    <header>
+      <h1>Community Events</h1>
+      <p>Join us in these exciting community activities!</p>
+      <br>
+         <a id="add-event-link" href="https://forms.gle/iA3oDg4UL49547kY8" target="_blank">Add an Event</a>
+  </header>
+    </header>
+
+
+    <div id="event-list">
+      <div class="event-row">
+        <div
+          class="event-item"
+          onclick="showEventDetails('Recycling Drive', 'Join us for a recycling drive in Shahdara, Delhi.', '2024-02-10', 'Shahdara, Delhi')"
+        >
+          <div class="event-title">Recycling Drive</div>
+          <div class="event-description">
+            Join us for a recycling drive in Shahdara, Delhi.
+          </div>
+          <button class="event-date">Date: 2024-02-10</button>
+          <button class="event-location">Location: Shahdara, Delhi</button>
+        </div>
+
+
+        <div
+          class="event-item"
+          onclick="showEventDetails('Community Cleanup', 'Help us keep our community clean by participating in a cleanup activity.', '2024-02-15', 'Community Park')"
+        >
+          <div class="event-title">Community Cleanup</div>
+          <div class="event-description">
+            Help us keep our community clean by participating in a cleanup
+            activity.
+          </div>
+          <button class="event-date">Date: 2024-02-15</button>
+          <button class="event-location">Location: Community Park</button>
+        </div>
+
+
+        <div
+          class="event-item"
+          onclick="showEventDetails('Tree Plantation', 'Contribute to the environment by planting trees together.', '2024-02-20', 'Green Belt Area')"
+        >
+          <div class="event-title">Tree Plantation</div>
+          <div class="event-description">
+            Contribute to the environment by planting trees together.
+          </div>
+          <button class="event-date">Date: 2024-02-20</button>
+          <button class="event-location">Location: Green Belt Area</button>
+        </div>
+
+
+        <div
+          class="event-item"
+          onclick="showEventDetails('Eco Workshop', 'Learn about sustainable living in our eco workshop.', '2024-02-25', 'Community Center')"
+        >
+          <div class="event-title">Eco Workshop</div>
+          <div class="event-description">
+            Learn about sustainable living in our eco workshop.
+          </div>
+          <button class="event-date">Date: 2024-02-25</button>
+          <button class="event-location">Location: Community Center</button>
+        </div>
+      </div>
+
+
+      <div class="event-row">
+        <div
+          class="event-item"
+          onclick="showEventDetails('Upcycling Challenge', 'Turn old items into new treasures in our upcycling challenge.', '2024-03-01', 'Art Studio')"
+        >
+          <div class="event-title">Upcycling Challenge</div>
+          <div class="event-description">
+            Turn old items into new treasures in our upcycling challenge.
+          </div>
+          <button class="event-date">Date: 2024-03-01</button>
+          <button class="event-location">Location: Art Studio</button>
+        </div>
+
+
+        <div
+          class="event-item"
+          onclick="showEventDetails('Green Market', 'Explore and support local sustainable products at our green market.', '2024-03-05', 'Market Square')"
+        >
+          <div class="event-title">Green Market</div>
+          <div class="event-description">
+            Explore and support local sustainable products at our green market.
+          </div>
+          <button class="event-date">Date: 2024-03-05</button>
+          <button class="event-location">Location: Market Square</button>
+        </div>
+
+
+        <div
+          class="event-item"
+          onclick="showEventDetails('Beach Cleanup', 'Join us for a beach cleanup to protect marine life.', '2024-03-10', 'Sunset Beach')"
+        >
+          <div class="event-title">Beach Cleanup</div>
+          <div class="event-description">
+            Join us for a beach cleanup to protect marine life.
+          </div>
+          <button class="event-date">Date: 2024-03-10</button>
+          <button class="event-location">Location: Sunset Beach</button>
+        </div>
+
+
+        <div
+          class="event-item"
+          onclick="showEventDetails('Community Garden', 'Help in maintaining our community garden.', '2024-03-15', 'Community Garden')"
+        >
+          <div class="event-title">Community Garden</div>
+          <div class="event-description">
+            Help in maintaining our community garden.
+          </div>
+          <button class="event-date">Date: 2024-03-15</button>
+          <button class="event-location">Location: Community Garden</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      function showEventDetails(title, description, date, location) {
+        alert(
+          `Event: ${title}\nDescription: ${description}\nDate: ${date}\nLocation: ${location}`
+        );
+      }
+    </script>
+    
+  </body>
+</html>
+
+

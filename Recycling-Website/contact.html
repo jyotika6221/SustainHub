@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Recycling Company</title>
+  <!-- Add your custom CSS for styling here -->
+  <style>
+    /* Define your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4caf50;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+      <script>
+    // Include the navbar using JavaScript
+    document.write('<div id="navbar-placeholder"></div>');
+    document.getElementById('navbar-placeholder').innerHTML =
+        '<object type="text/html" data="navbar.html" ></object>';
+</script>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+  <div class="container">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="79597308-e195-4d18-a25f-a672064b3805">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <div class="h-captcha" data-captcha="true"></div>
+      <input type="submit" value="Submit Form">
+    </form>
+  </div>
+  <footer>
+    <p>Contact us at: recycling@company.com | Phone: 123-456-7890</p>
+  </footer>
+  <!-- Include Web3Forms script for form functionality -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>

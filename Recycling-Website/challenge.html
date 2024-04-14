@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Challenge: Task Tracker and Leaderboard</title>
+   
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        background-image: url("back_challenge.jpg"); /* Add your background image URL */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        width: 80vw;
+      }
+
+      .tasks {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 45%;
+      }
+
+      .leaderboard {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 45%;
+      }
+
+      h1 {
+        color: #4caf50;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .tasks h1,
+      .leaderboard h1 {
+        color: #333;
+        font-size: 28px;
+      }
+
+      .tasks label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 16px;
+        text-align: left; /* Adjusted text alignment */
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+
+      #leaderboard {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border: 2px solid #4caf50; /* Add border to the table */
+        margin-top: 20px;
+      }
+
+      #leaderboard th,
+      #leaderboard td {
+        border: 1px solid #ddd;
+        padding: 8px; /* Decreased padding for name and points */
+        font-size: 14px; /* Decreased font size */
+      }
+
+      #leaderboard th {
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+      }
+
+      #leaderboard tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #leaderboard tr:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+        <script>
+    // Include the navbar using JavaScript
+    document.write('<div id="navbar-placeholder"></div>');
+    document.getElementById('navbar-placeholder').innerHTML =
+        '<object type="text/html" data="navbar.html" ></object>';
+</script>
+    
+    <div class="container">
+      
+      <div class="tasks">
+        <h1>Green Challenge Task Tracker</h1>
+        <label>
+          <input type="checkbox" class="task" data-points="15" /> Upcycling
+          Challenge (+15 points)
+        </label>
+        <label>
+          <input type="checkbox" class="task" data-points="25" /> Community
+          Cleanup (+25 points)
+        </label>
+        <label>
+          <input type="checkbox" class="task" data-points="30" /> Beach Cleanup
+          (+30 points)
+        </label>
+        <label>
+          <input type="checkbox" class="task" data-points="35" /> Eco Workshop
+          (+35 points)
+        </label>
+        <label>
+          <input type="checkbox" class="task" data-points="45" /> Tree
+          Plantation (+45 points)
+        </label>
+        <label>
+          <input type="checkbox" class="task" data-points="60" /> Recycling
+          Drive (+60 points)
+        </label>
+        <button onclick="addPoints()">Add Points</button>
+      </div>
+
+      <div class="leaderboard">
+        <h1>Green Challenge Leaderboard</h1>
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+            <!-- Leaderboard rows will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof Submission</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+   
+
+    <script>
+      // ... (Your existing JavaScript code)
+      // ... (Your // Define an array to store participants and their points
+      let participants = [];
+
+      // Function to update the leaderboard
+      function updateLeaderboard() {
+        // Clear the current leaderboard
+        document.getElementById("leaderboardBody").innerHTML = "";
+
+        // Sort participants by points in descending order
+        participants.sort((a, b) => b.points - a.points);
+
+        // Add participants to the leaderboard
+        participants.forEach((participant) => {
+          let row = document.createElement("tr");
+          row.innerHTML = `
+          <td>${participant.name}</td>
+          <td>${participant.points}</td>
+        `;
+          document.getElementById("leaderboardBody").appendChild(row);
+        });
+      }
+
+      // Function to add points when the "Add Points" button is clicked
+      function addPoints() {
+        let totalPoints = 0;
+        let name = prompt("Enter your name:");
+        if (name) {
+          // Calculate total points based on checked tasks
+          document.querySelectorAll(".task:checked").forEach((checkbox) => {
+            totalPoints += parseInt(checkbox.dataset.points);
+            // Uncheck the checkbox after adding points
+            checkbox.checked = false;
+          });
+
+          // Add the participant to the array if not already present
+          let participant = participants.find((p) => p.name === name);
+          if (!participant) {
+            participant = {
+              name: name,
+              points: 0,
+            };
+            participants.push(participant);
+          }
+          // Increment points for the participant
+          participant.points += totalPoints;
+
+          // Update the leaderboard
+          updateLeaderboard();
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <title>Memory Card Game</title>
+  </head>
+
+  <body>
+        <script>
+    // Include the navbar using JavaScript
+    document.write('<div id="navbar-placeholder"></div>');
+    document.getElementById('navbar-placeholder').innerHTML =
+        '<object type="text/html" data="navbar.html" ></object>';
+</script>
+    <div class="container">
+      <div id="dynamic-cards" class="game-container">
+        <div class="heading-container">
+        
+          <h2 class="game-heading">Click any card to flip it!</h2>
+          <!-- Score Button -->
+        </div>
+          <div class="cards-container">
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="1"
+                src="metal.jpg"
+              
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="2"
+                src="glass.jpg"
+            
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="3"
+                src="paper.jpg"
+      
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="4"
+                src="glass.jpg"
+              
+                class="card-image"
+              />
+            </div>
+  
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="5"
+                src="paper.jpg"
+           
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="6"
+                src="metal.jpg"
+              
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+              src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="7"
+                src="metal2.jpg"
+              
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+              src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="8"
+                src="glass2.jpg"
+              
+                class="card-image"
+              />
+            </div>
+  
+            <div class="card">
+              <img
+              src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="9"
+                src="cans.png"
+            
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+              src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="10"
+                src="metal2.jpg"
+              
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="11"
+                src="cans.png"
+          
+                class="card-image"
+              />
+            </div>
+            <div class="card">
+              <img
+                src="logo.png"
+                class="outline-image"
+              />
+              <img
+                id="12"
+                src="glass2.jpg"
+            
+                class="card-image"
+              />
+            </div>
+          </div>
+
+          
+        </div>
+
+        <div class="progress-container">
+          <div class="move-counter">Moves: 0</div>
+          <button id="scoreButton" class="score-button">Score: 0</button> 
+          <button id="restart" class="restart-button">Restart Game</button>
+        </div>
+      </div>
+    </div>
+    <!-- Add this within the <body> of your HTML -->
+<div id="popup-container" class="popup-container hidden">
+  <div class="popup-content">
+ 
+    <p>To recycle glass bottles, adhere to local guidelines, separate colors, remove caps, and rinse before using designated drop-off centers or curbside services. Utilize deposit return programs if available. Dispose in regular trash if recycling isn't an option, or consider creative reuse. Properly handle hazardous materials through specialized services, following local regulations.</p>
+  </div>
+</div>
+
+
+    <script src="game.js"></script>
+
+  </body>
+</html>  

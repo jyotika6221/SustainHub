@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-bU7hEMtxK2X9QexjKA00o5aUOtEtBz+q6pU/gxFo3/YsZK0QUrtweSFC2ZbY7V4DF5mRXQlTpzRE3JcRL4t9bg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/abouts/about-1/assets/css/about-1.css" />
+
+  <title>Recycle</title>
+
+
+  <script
+  type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: "en", autoDisplay: false },
+      "google_translate_element"
+    );
+  }
+</script>
+<style>
+  .card {
+  border: 3px solid green;
+}
+
+</style>
+  <style>
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #quiz-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .question {
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light" id="home">
+      <div class="container-fluid">
+        <img src="Recycle001.svg" alt="Bootstrap" width="30" height="24">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="challenge.html">Daily Challenge</a></li>
+                <li><a class="dropdown-item" href="calendar.html">Event calendar</a></li>
+                <li><a class="dropdown-item" href="recycle.html">Recycling stations</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#education">Articles</a></li>
+                <li><a class="dropdown-item" href="webinar.html">Join Webinars</a></li>
+                <li><a class="dropdown-item" href="quiz.html">Quiz</a></li>
+              </ul>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="cevents.html">Community Events</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="resell.html">Resell Products</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+       
+          <div class="d-flex">
+            <button type="button" id="login" name="login" class="btn btn-success" onclick="openLoginPage()">Login</button>
+  
+            <a href="register.html" class="btn btn-primary btn-sm mx-2">Sign Up</a>
+          </div>
+          <script>
+            function openLoginPage() {
+              window.open("login.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=800,height=600");
+            }
+          
+            function logout() {
+              // Perform logout actions here, such as clearing session data or calling a logout API
+          
+              // Hide the logout button
+              document.getElementById("logout").classList.add("d-none");
+          
+              // Show the login button
+              document.getElementById("login").classList.remove("d-none");
+            }
+          
+            // Function to be called after successful login to show the logout button
+            function showLogoutButton() {
+              // Show the logout button
+              document.getElementById("logout").classList.remove("d-none");
+          
+              // Hide the login button
+              document.getElementById("login").classList.add("d-none");
+            }
+          </script>
+        
+          
+          
+          
+        </div>
+      </div>
+    </nav>
+        <script>
+    // Include the navbar using JavaScript
+    document.write('<div id="navbar-placeholder"></div>');
+    document.getElementById('navbar-placeholder').innerHTML =
+        '<object type="text/html" data="navbar.html" ></object>';
+</script>
+    <h1>Recycling Challenge</h1>
+    <div id="quiz-container">
+      <div id="question-container" class="question"></div>
+      <button id="next-button">Next</button>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          question: "What is the first step in recycling?",
+          options: ["Collection", "Sorting", "Processing", "Disposal"],
+          correctAnswer: "Collection",
+        },
+        {
+          question: "Which material is commonly recycled in households?",
+          options: ["Plastic", "Glass", "Metal", "All of the above"],
+          correctAnswer: "All of the above",
+        },
+        {
+          question: "What is composting?",
+          options: [
+            "A method of recycling paper",
+            "A way to dispose of electronic waste",
+            "Decomposing organic waste into nutrient-rich soil",
+            "Creating art from recycled materials",
+          ],
+          correctAnswer: "Decomposing organic waste into nutrient-rich soil",
+        },
+      ];
+
+      const questionContainer = document.getElementById("question-container");
+      const nextButton = document.getElementById("next-button");
+      let currentQuestionIndex = 0;
+
+      function showQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionContainer.innerHTML = `
+          <h2>${currentQuestion.question}</h2>
+          <ul>
+            ${currentQuestion.options
+              .map(
+                (option, index) =>
+                  `<li><input type="radio" name="answer" value="${option}" id="option${index}" /> <label for="option${index}">${option}</label></li>`
+              )
+              .join("")}
+          </ul>
+        `;
+      }
+
+      function showNextQuestion() {
+        const selectedOption = document.querySelector(
+          'input[name="answer"]:checked'
+        );
+        if (selectedOption) {
+          const userAnswer = selectedOption.value;
+          const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+
+          if (userAnswer === correctAnswer) {
+            alert("Correct! 🌟");
+          } else {
+            alert(`Incorrect. The correct answer is: ${correctAnswer}`);
+          }
+
+          currentQuestionIndex++;
+
+          if (currentQuestionIndex < questions.length) {
+            showQuestion();
+          } else {
+            alert("Congratulations! You completed the Recycling Challenge.");
+            questionContainer.innerHTML = "<p>Challenge Completed!</p>";
+            nextButton.style.display = "none";
+          }
+        } else {
+          alert("Please select an answer.");
+        }
+      }
+
+      nextButton.addEventListener("click", showNextQuestion);
+
+      // Initial display
+      showQuestion();
+    </script>
+
+  
+<!-- used for translation -->
+<div id="google_translate_element"></div>
+<!-- used for translation -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+  -->
+</body>
+
+</html>

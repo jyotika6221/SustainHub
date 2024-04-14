@@ -1,0 +1,66 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('recycling-background.jpg'); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .chat-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    /* border: 2px solid #5cb85c; */
+     /* Dark green border */
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+  }
+  
+  .chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .chat-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .bot-message {
+    background-color: #c7efc3; /* Light green background color for bot messages */
+  }
+  
+  .user-message {
+    background-color: #9bcf8e; /* Medium green background color for user messages */
+    color: #fff; /* White text color for user messages */
+    text-align: right;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 60px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #9bcf8e; /* Medium green border for input field */
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 50px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #5cb85c; /* Dark green button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4cae4c; /* Darker green color on hover */
+  }
+  

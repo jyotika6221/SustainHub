@@ -1,0 +1,255 @@
+/* Add modal styles */
+
+/* Style the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.game-heading {
+  font-size: 24px;
+  color: #105d17; /* Green color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.game-heading::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #007f5f; /* Green color */
+  margin: 10px auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/* Style the smaller score button */
+.score-button {
+  background-color: #1b771e;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.game-container {
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  row-gap: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-image: linear-gradient(90deg, #fffbd5, #ccc);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-rows: 125px 125px 125px;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 20px 10px;
+  place-items: center;
+}
+
+.heading-container {
+  text-align: center;
+}
+
+.recycle-heading {
+  color: #0e9d57;
+}
+
+.card {
+  justify-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.outline-image {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+}
+
+.card-image {
+  height: 125px;
+  width: 125px;
+  transform: rotateY(90deg);
+  transition: all ease-in 0.25s;
+  mix-blend-mode: multiply;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Horizontally center items */
+  margin-top: 10px; /* Add some margin if needed */
+}
+
+.move-counter,
+.score-button,
+.restart-button {
+  margin-bottom: 10px; /* Add margin between elements */
+}
+
+.move-counter {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.restart-button {
+  padding: 10px 20px;
+  background-color: #1b771e;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: transparent;
+  border: 1px solid #0e9d57;
+  color: #0e9d57;
+}
+
+/* Dynamic classes that are being added by JavaScript */
+.toggled .card-image {
+  transform: rotateY(0deg);
+  transition-delay: 0.25s;
+}
+
+.item .outline-image {
+  transition: all ease-in 0.25s;
+  transition-delay: 0.25s;
+}
+
+.toggled .outline-image {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+@media screen and (max-width: 767px) {
+  .game-container {
+    width: 100%;
+  }
+
+  .cards-container {
+    grid-template-rows: 125px 125px 125px 125px;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px 10px;
+  }
+
+  .outline-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .card-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .progress-container {
+    margin: 10px 0 10px 0;
+  }
+}
+/* Add this to your existing CSS or create a new CSS file */
+
+/* Add this in your game.css file or include it in your HTML's head with a <style> tag */
+/* Add this in your game.css file or include it in your HTML's head with a <style> tag */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #264a28; /* Green background color */
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  color: #fff0f0; /* Text color */
+}
+
+.popup-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-content {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.popup-content p {
+  margin: 10px 0;
+  color: #f0ebeb; /* Text color */
+}
+
+/* Optional: Add styling for close button */
+.popup-content .close-button {
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.popup-content .close-button:hover {
+  color: #555;
+}
