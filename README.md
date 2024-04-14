@@ -34,7 +34,7 @@ To get started with the Green Challenge website, follow these steps:
 2. Clone the Repository
    - Clone the forked repository to your local machine using the following command:
      bash
-     git clone https://github.com/your-username/Recycling-Website.git
+     git clone https://github.com/your-username/SustainHub.git
      
 
 3. Open the Website
