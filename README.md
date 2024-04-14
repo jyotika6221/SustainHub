@@ -39,11 +39,6 @@ To get started with the Green Challenge website, follow these steps:
 
 3. Open the Website
    - Open the index.html file in your preferred web browser to start using this website.
-  
-## Video link- https://youtu.be/XU10gfjOZAA?si=-p9hA6YIix7miq4l
 
-## Presentation link- https://www.canva.com/design/DAF7utpnPKw/JtE0QPjUztXS-MGPOgULNA/view
-
-## Website link- https://rainbow-churros-2c9d95.netlify.app/
 
 ##  Project made by team Tech Duo
