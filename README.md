@@ -41,4 +41,4 @@ To get started with the Green Challenge website, follow these steps:
    - Open the index.html file in your preferred web browser to start using this website.
 
 
-##  Project made by team Tech Duo
+
